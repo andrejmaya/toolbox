@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: toolbox
+spec:
+#  volumes:
+#    - name: grafana-data
+#      persistentVolumeClaim:
+#        claimName: grafana-data
+  containers:                            
+  - image: andrejmaya/toolbox
+    imagePullPolicy: Always
+    name: toolbox
+    resources: {}
+    command: ["/bin/sh", "-c", "sleep 6000"]
+#    volumeMounts:
+#      - name: grafana-data
+#        mountPath: /var/opt    
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+  #serviceAccount: toolbox
