@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk update && apk add curl openssh sqlite
+RUN apk update && apk add curl openssh sqlite wget
 
 
-CMD sleep 6000
+CMD while true; do sleep 30; done;
