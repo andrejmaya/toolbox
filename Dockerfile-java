@@ -1,0 +1,6 @@
+FROM openjdk:8-jdk-alpine
+
+RUN apk update && apk add telnet curl openssh sqlite wget git maven
+
+
+CMD while true; do sleep 30; done;
