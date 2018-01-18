@@ -3,17 +3,10 @@ kind: Pod
 metadata:
   name: toolbox
 spec:
-#  volumes:
-#    - name: grafana-data
-#      persistentVolumeClaim:
-#        claimName: grafana-data
   containers:                            
   - image: andrejmaya/toolbox
     imagePullPolicy: Always
     name: toolbox
-#   command: ["/bin/sh", "-c", "while true; do sleep 1;done;"]
-#    volumeMounts:
-#      - name: grafana-data
-#        mountPath: /var/opt    
-  dnsPolicy: ClusterFirst
-  restartPolicy: Always
+    ports:
+      - containerPort: 5432
+        protocol: TCP    
