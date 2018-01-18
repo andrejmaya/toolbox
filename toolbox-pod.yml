@@ -11,11 +11,9 @@ spec:
   - image: andrejmaya/toolbox
     imagePullPolicy: Always
     name: toolbox
-    resources: {}
-    command: ["/bin/sh", "-c", "while true; do sleep 1;done;"]
+#   command: ["/bin/sh", "-c", "while true; do sleep 1;done;"]
 #    volumeMounts:
 #      - name: grafana-data
 #        mountPath: /var/opt    
   dnsPolicy: ClusterFirst
   restartPolicy: Always
-  #serviceAccount: toolbox
