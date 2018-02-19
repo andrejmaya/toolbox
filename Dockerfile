@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk update && apk add curl openssh sqlite wget socat postgresql busybox-extras
+RUN apk update && apk add curl openssh sqlite wget socat postgresql busybox-extras bash
 
 
 CMD while true; do sleep 30; done;
